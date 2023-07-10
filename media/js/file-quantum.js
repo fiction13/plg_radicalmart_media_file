@@ -87,7 +87,6 @@ window.RadicalMartFieldGalleryFileQuantum = {
 						let src = response.path;
 						let template = window.RadicalMartFieldGallery.getTypeTemplate(container, 'file');
 						if (template) {
-
 							template.querySelector('input[data-name*="[type]"]').value = 'file';
 							template.querySelector('input[data-name*="[src]"]').setAttribute('value', src);
 

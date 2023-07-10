@@ -40,7 +40,7 @@ window.RadicalMartFieldGalleryFile = {
 									let template = window.RadicalMartFieldGallery.getTypeTemplate(container, 'file');
 									if (template) {
 										template.querySelector('input[data-name*="[type]"]').value = 'file';
-										template.querySelector('input[data-name*="[src]"]').value = src;
+										template.querySelector('input[data-name*="[src]"]').setAttribute('value', src);
 
 										let preview = template.querySelector('[radicalmart-field-gallery="preview"]');
 										if (preview) {
