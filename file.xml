@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ @package   plg_radicalmart_media_file
+  ~ @version   __DEPLOY_VERSION__
+  ~ @author    Dmitriy Vasyukov - https://fictionlabs.ru
+  ~ @copyright Copyright (c) 2023 Fictionlabs. All rights reserved.
+  ~ @license   GNU/GPL license: http://www.gnu.org/copyleft/gpl.html
+  ~ @link      https://fictionlabs.ru/
+  -->
+
+<extension version="4.2" type="plugin" group="radicalmart_media" method="upgrade">
+	<name>PLG_RADICALMART_MEDIA_FILE</name>
+    <author>Dmitriy Vasyukov</author>
+    <creationDate>July 2023</creationDate>
+    <authorEmail>info@fictionlabs.ru</authorEmail>
+    <authorUrl>https://fictionlabs.ru</authorUrl>
+    <copyright>A copyright</copyright>
+    <license>GNU General Public License version 2 or later;</license>
+    <version>1.0.1-dev</version>
+    <description>PLG_RADICALMART_MEDIA_FILE_DESCRIPTION</description>
+	<namespace path="src">Joomla\Plugin\RadicalMartMedia\File</namespace>
+	<scriptfile>script.php</scriptfile>
+
+	<!-- Language files -->
+	<languages folder="language">
+		<language tag="en-GB">en-GB/plg_radicalmart_media_file.ini</language>
+		<language tag="en-GB">en-GB/plg_radicalmart_media_file.sys.ini</language>
+		<language tag="ru-RU">ru-RU/plg_radicalmart_media_file.ini</language>
+		<language tag="ru-RU">ru-RU/plg_radicalmart_media_file.sys.ini</language>
+	</languages>
+
+	<!-- Files -->
+	<files>
+		<folder>services</folder>
+		<folder plugin="file">src</folder>
+	</files>
+
+	<!-- Layouts files -->
+	<layouts destination="plugins/radicalmart_media/file" folder="layouts">
+		<folder>field</folder>
+	</layouts>
+
+	<!-- Media files -->
+	<media destination="plg_radicalmart_media_file" folder="media">
+		<folder>js</folder>
+		<file>joomla.asset.json</file>
+	</media>
+
+	<!-- Update server -->
+	<updateservers>
+		<server type="extension" priority="1" name="RadicalMart Media: File">
+			https://sovmart.ru/update?element=plg_radicalmart_media_file
+		</server>
+	</updateservers>
+</extension>
